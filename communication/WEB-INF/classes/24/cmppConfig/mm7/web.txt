@@ -1,0 +1,26 @@
+<servlet>
+		<description>mm7 mo servlet</description>
+		<servlet-name>moRequestreplacemoduleid</servlet-name>
+		<servlet-class>com.lxt2.mmsgateway.mo.MM7MOServlet</servlet-class>
+		<init-param>
+			<param-name>mmsg_constants_beanname</param-name>
+			<param-value>mmsgConstantsreplacemoduleid</param-value>
+		</init-param>
+		<init-param>
+			<param-name>sid_beanname</param-name>
+			<param-value>ndSid</param-value>
+		</init-param>
+		<init-param>
+			<param-name>hub_beanname</param-name>
+			<param-value>hubImpl</param-value>
+		</init-param>
+		<init-param>
+			<param-name>data_gather</param-name>
+			<param-value>mtsDataGatherreplacemoduleid</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>moRequestreplacemoduleid</servlet-name>
+		<url-pattern>/vasreplacemoduleid</url-pattern>
+	</servlet-mapping>

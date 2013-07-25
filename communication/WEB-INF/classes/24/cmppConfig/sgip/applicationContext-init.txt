@@ -1,0 +1,4 @@
+		<!--ÁªÍ¨Íø¹Ø-->
+	<import resource="communicate/mtsubmit/sms/replacemoduleid_mo_sgip.xml" />
+	<import resource="communicate/mtsubmit/sms/replacemoduleid_mt_sgip.xml" />
+	<import resource="communicate/mtsubmit/sms/replacemoduleid_mod.xml" />

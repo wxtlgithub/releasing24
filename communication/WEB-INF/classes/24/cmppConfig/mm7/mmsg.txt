@@ -1,0 +1,8 @@
+
+mmsg.mm7ConfigPathreplacemoduleid=${CLASSPATH}/${nodeID}/persistent/mm7Config.xml
+mmsg.connConfigPathreplacemoduleid=${CLASSPATH}/${nodeID}/persistent/ConnConfig.xml
+mmsg.gatewayIdreplacemoduleid=replaceGatewayId
+mmsg.operatorIdreplacemoduleid=1
+
+
+

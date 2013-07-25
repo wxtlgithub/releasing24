@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- 彩信网关submit队列监听器的相关过滤配置begin -->
+	<!-- 敏感词过滤器 -->
+	<bean id="mmsKeyWordFilterreplacemoduleid" class="com.lxt2.mmsgateway.filter.MmsResourceKeyWordFilter">
+		<property name="idirtyword" ref="dwDirtyWord" />
+		<property name="commonResourceCenter" ref="commonResourceCenter" />
+		<property name="mmsgConstants" ref="mmsgConstantsreplacemoduleid" />
+		<property name="exceptionHandler" ref="mmsExceptionHandle" />
+		<property name="hub" ref="hubImpl" />
+	</bean>
+	<!--模板替换过滤器 -->
+	<bean id="mmContentCreateFilterreplacemoduleid" class="com.lxt2.mmsgateway.filter.MmContentCreateFilter">
+		<property name="mmContentCreator" ref="mmContentCreatorreplacemoduleid" />
+		<property name="mmsgConstants" ref="mmsgConstantsreplacemoduleid" />
+		<property name="exceptionHandler" ref="mmsExceptionHandle" />
+		<property name="hub" ref="hubImpl" />
+	</bean>
+	<!--入发送队列监听器 -->
+	<bean id="inMmsSendQueueFilterreplacemoduleid" class="com.lxt2.mmsgateway.filter.InMmsSendQueueFilter">
+		<property name="mmsSendQueue" ref="mmsSendQueuereplacemoduleid" />
+		<property name="exceptionHandler" ref="mmsExceptionHandle" />
+		<property name="hub" ref="hubImpl" />
+
+	</bean>
+	<!-- 彩信网关submit队列监听器的相关过滤配置end -->
+
+	<!-- 彩信网关send队列监听器的相关过滤配置begin -->
+	<!--彩信速度控制过滤器 -->
+	<bean id="mmsSpeedControlFilterreplacemoduleid" class="com.lxt2.mmsgateway.filter.MmsSpeedControlFilter">
+		<property name="equidistributionSpeeder">
+			<bean class="com.techcenter.speed.EquidistributionSpeeder">
+				<constructor-arg index="0" value="${mmsg.sendSpeed}" />
+			</bean>
+		</property>
+	</bean>
+	<!--彩信下发过滤器 -->
+	<bean id="mmsContentSendFilterreplacemoduleid" class="com.lxt2.mmsgateway.filter.MmsContentSendFilter">
+		<property name="mmsSender" ref="mmsSenderreplacemoduleid" />
+		<property name="mmsSendQueue" ref="mmsSendQueuereplacemoduleid" />
+		<property name="mmsgConstants" ref="mmsgConstantsreplacemoduleid" />
+		<property name="exceptionHandler" ref="mmsExceptionHandle" />
+		<property name="respInHubService" ref="respInHubServicereplacemoduleid" />
+		<property name="sid" ref="ndSid" />
+		<property name="hub" ref="hubImpl" />
+		<property name="dataGather" ref="mtsDataGatherreplacemoduleid" />
+	</bean>
+	<!-- 彩信网关send队列监听器的相关过滤配置end -->
+
+	<bean id="respInHubServicereplacemoduleid" class="com.lxt2.mmsgateway.service.RespInHubService">
+		<property name="exceptionHandle" ref="mmsExceptionHandle" />
+		<property name="sid" ref="ndSid" />
+		<property name="hub" ref="hubImpl" />
+		<property name="saveLogger" ref="saveLogger" />
+	</bean>
+
+	<!-- 上行监控过滤 -->
+
+	<!-- 彩信上行信息入Hub过滤器 -->
+	<bean id="mmsDeliverInHubFilterreplacemoduleid" class="com.lxt2.mmsgateway.filter.MmsDeliverInHubFilter" />
+
+	<!-- 彩信上行预处理队列监听器相关过滤配置end -->
+
+
+	<!-- 成功彩信下行请求进入彩信下行记录表过滤器 -->
+
+	<!-- 彩信状态报告进入彩信状态报告表过滤器 -->
+	<bean id="mmsReportInHubFilterreplacemoduleid" class="com.lxt2.mmsgateway.filter.MmsReportInHubFilter" />
+
+	<!-- 彩信网关submit队列监听器 -->
+	<bean id="mmsSubmitQueueListenerreplacemoduleid" class="com.lxt2.mmsgateway.listener.MmsSubmitQueueListener" init-method="init" destroy-method="destroy">
+		<property name="hub" ref="hubImpl" />
+		<property name="maxWorker" value="3" />
+		<property name="filters">
+			<list>
+				<ref local="mmsKeyWordFilterreplacemoduleid" />
+				<ref local="mmContentCreateFilterreplacemoduleid" />
+				<ref local="inMmsSendQueueFilterreplacemoduleid" />
+			</list>
+		</property>
+	</bean>
+	<!--彩信发送队列监听器 -->
+	<bean id="mmsSendQueueListenerreplacemoduleid" class="com.lxt2.mmsgateway.listener.MmsSendQueueListener"
+		init-method="init" destroy-method="destroy">
+		<property name="maxWorker" value="3" />
+		<property name="filters">
+			<list>
+				<ref local="mmsSpeedControlFilterreplacemoduleid" />
+				<ref local="mmsContentSendFilterreplacemoduleid" />
+			</list>
+		</property>
+	</bean>
+
+</beans>

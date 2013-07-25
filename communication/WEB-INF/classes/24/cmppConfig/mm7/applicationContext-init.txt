@@ -1,0 +1,6 @@
+		<!--mm7อ๘นุ-->
+	<import resource="communicate/mtsubmit/mms/replacemoduleid_constants.xml" />
+	<import resource="communicate/mtsubmit/mms/replacemoduleid_gateway.xml" />
+	<import resource="communicate/mtsubmit/mms/replacemoduleid_queue.xml" />
+	<import resource="communicate/mtsubmit/mms/replacemoduleid_listenerfilters.xml" />
+	<import resource="communicate/mtsubmit/mms/replacemoduleid_mod.xml" />

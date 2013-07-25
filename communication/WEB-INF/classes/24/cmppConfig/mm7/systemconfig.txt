@@ -1,0 +1,8 @@
+		<!-- mm7网关下发模块 -->
+                        <function>
+                                <id>replacemoduleid</id>
+                                <name>mtsGatewayModulereplacemoduleid</name>
+                                <bean>mtsGatewayModulereplacemoduleid</bean>
+                                <type>MTS</type>
+                                <config></config>
+                        </function>

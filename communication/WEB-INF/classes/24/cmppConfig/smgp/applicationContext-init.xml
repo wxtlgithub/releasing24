@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>24/communicate/lxt_oracle.properties</value>
+				<value>24/communicate/communicate.properties</value>
+				<value>24/communicate/mmsg.properties</value>
+				<!-- <value>classpath:communicate/mmsg.properties</value> -->
+			</list>
+		</property>
+	</bean>
+
+
+	<import resource="lxt_node.xml" />
+	<import resource="communicate/common/lxt_dbcp.xml" />
+	<import resource="communicate/common/lxt_oracle.xml" />
+	<import resource="communicate/common/hub.xml" />
+	<import resource="communicate/common/lxt_clientinfo.xml" />
+	<import resource="communicate/common/mts_common.xml" />
+	<import resource="communicate/common/resource_center.xml" />
+
+<!-- 	<import resource="communicate/proxyservice/db/ps_db_listenerfilters.xml" />
+	<import resource="communicate/proxyservice/db/ps_db_queue.xml" />
+	<import resource="communicate/proxyservice/1004_mod.xml" />
+	<import resource="communicate/proxyservice/1004_ps.xml" />
+	<import resource="communicate/proxyservice/1004_cbip_socket.xml" />
+	<import resource="communicate/proxyservice/ps_productverify.xml"/> -->
+
+
+
+	<import resource="communicate/mtprocess/mtp_specialmobile.xml" />
+	<import resource="communicate/mtprocess/mtp_phase.xml" />
+	<import resource="communicate/mtprocess/mtp_mod_1104.xml" />
+	<import resource="communicate/mtprocess/mtp_1104.xml" />
+	<import resource="communicate/mtprocess/mtp_router.xml" />
+	<import resource="communicate/mtprocess/mtp_blacklist.xml" />
+	<import resource="communicate/mtprocess/mtp_blacklistMMS.xml" />
+	<import resource="communicate/mtprocess/mtp_keyword.xml" /> 
+
+	<import resource="communicate/moprocess/mop_mod_1404.xml" />
+	<import resource="communicate/moprocess/mop_1404.xml" />
+	<import resource="communicate/moprocess/mop_router.xml" />
+
+	<import resource="communicate/rptprocess/rpt_mod_1304.xml" />
+	<import resource="communicate/clumped/Clumped_Mod_1504.xml" />
+
+	<import resource="communicate/mtsubmit/sms/2401_mod.xml" />
+	<import resource="communicate/mtsubmit/sms/2401_cmpp30.xml" />
+	<import resource="communicate/mtsubmit/sms/2402_mod.xml" />
+	<import resource="communicate/mtsubmit/sms/2402_cmpp20.xml" />
+	<import resource="communicate/mtsubmit/sms/2403_mod.xml" />
+	<import resource="communicate/mtsubmit/sms/2403_smgp.xml" />
+	<import resource="communicate/mtsubmit/sms/2404_mo_sgip.xml" />
+	<import resource="communicate/mtsubmit/sms/2404_mt_sgip.xml" />
+	<import resource="communicate/mtsubmit/sms/2404_mod.xml" />
+	<import resource="communicate/mtsubmit/sms/2408_empp.xml" />
+	<import resource="communicate/mtsubmit/sms/2408_mod.xml" />
+	<import resource="communicate/mtsubmit/sms/2406_mod.xml" />
+	<import resource="communicate/mtsubmit/sms/2406_mas.xml" />
+ 	<import resource="communicate/mtsubmit/sms/2407_mod.xml" />
+	<import resource="communicate/mtsubmit/sms/2407_cbip10.xml" />
+	fieldReplaceStrmod
+	fieldReplaceStrgate
+
+<!-- 	<import resource="communicate/mtsubmit/sms/2409_mod.xml" />
+	<import resource="communicate/mtsubmit/sms/2409_cbip20.xml" /> -->
+
+	<import resource="communicate/common/mime_context.xml" />
+	<import resource="communicate/mtsubmit/mms/2405_constants.xml" />
+	<import resource="communicate/mtsubmit/mms/2405_gateway.xml" />
+	<import resource="communicate/mtsubmit/mms/2405_queue.xml" />
+	<import resource="communicate/mtsubmit/mms/2405_listenerfilters.xml" />
+	<import resource="communicate/mtsubmit/mms/2405_mod.xml" />
+
+</beans>

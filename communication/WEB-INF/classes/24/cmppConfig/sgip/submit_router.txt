@@ -1,0 +1,23 @@
+	<!-- 基本策略 -->
+	<!-- strategyType 基本主备均衡 operateid 1移动2联通3电信 -->
+	<submitRouter productId="replacemoduleid" operatorId="2" provinceId="1"
+		strategyType="1">
+		<baseStrategy>
+			<!-- 网关ID。 -->
+			<gatewayId>replaceGatewayId</gatewayId>
+			<!-- 网关类型。 1短信 2彩信 -->
+			<gatewayType>1</gatewayType>
+			<!-- 模块ID。 -->
+			<moduleId>replacemoduleid</moduleId>
+			<!-- 通道ID。 -->
+			<svcId>4</svcId>
+			<!-- 通道代码。 -->
+			<serviceCode>replacemoduleid</serviceCode>
+			<!-- 计费标准。 -->
+			<feeValue>1</feeValue>
+			<!-- 计费标准。 -->
+			<feeType>1</feeType>
+			<!-- 长号码。 -->
+			<longCode>4</longCode>
+		</baseStrategy>
+	</submitRouter>

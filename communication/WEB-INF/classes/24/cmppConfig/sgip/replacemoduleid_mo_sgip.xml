@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<!-- 设置网关启动参数 -->
+	<bean id="moSgipParameterreplacemoduleid" class="com.lxt2.gateway.sms.protocol.sgip.Sgip_Parameter">
+		<property name="gatewayId" ref="gatewayIdreplacemoduleid" />
+		<property name="gatewayXmlParser" ref="gatewayXml" />		
+		<property name="typeSocket">
+			<bean id="com.lxt2.gateway.sms.protocol.sgip.Sgip_Parameter.SocketType_Connector"
+				class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean" />
+		</property>
+		<property name="typeLink" value="MO" />
+		<property name="protocolVersion" value="48" />
+		<property name="connectActiveTest" value="true" />
+		<property name="clearTime" value="10" />
+	</bean>
+	<!-- 设置短信发送Support -->
+	<bean id="moSgipSupportreplacemoduleid" class="com.lxt2.gateway.sms.SgipSessionFlag" destroy-method="destory">
+		<property name="handler" value="moSgipHandlerreplacemoduleid" />
+		<property name="param" ref="moSgipParameterreplacemoduleid" />
+		<property name="gwconfig" ref="mtsSgipGatewayConfigreplacemoduleid" />
+	</bean>
+	<bean name="moSgipHandlerreplacemoduleid" class="com.lxt2.gateway.sms.protocol.sgip.SgipMO_Handler" scope="prototype">
+		<property name="gwconfig" ref="mtsSgipGatewayConfigreplacemoduleid" />
+	</bean>		
+</beans>

@@ -1,0 +1,2 @@
+<entry key="replacemoduleid" value-ref="mtsGatewayModulereplacemoduleid" />
+

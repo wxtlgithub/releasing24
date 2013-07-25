@@ -1,0 +1,3 @@
+		<!--ÒÆ¶¯Íø¹Ø-->
+	<import resource="communicate/mtsubmit/sms/replacemoduleid_mod.xml"/>
+	<import resource="communicate/mtsubmit/sms/replacemoduleid_cmpp20.xml"/>

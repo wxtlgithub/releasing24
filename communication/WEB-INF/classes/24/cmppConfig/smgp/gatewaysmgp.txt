@@ -1,0 +1,75 @@
+<smgp id="replaceGatewayId" type="1">
+		<operatorConfig>
+			<!-- 网关名称 -->
+			<gatewayName>上海电信通道</gatewayName>
+			<!-- 运营商编号 -->
+			<operatorId>3</operatorId>
+			<!-- IP地址 -->
+			<serverIP>127.0.0.1</serverIP>
+			<!-- 端口 -->
+			<serverPort>8890</serverPort>
+			<!-- mo IP地址 -->
+			<moServerIP>127.0.0.1</moServerIP>
+			<!-- mo端口 -->
+			<moServerPort>1</moServerPort>
+			<!-- 网关企业代码 -->
+			<spID>10086</spID>
+			<!-- 网关服务代码 -->
+			<spNumber>10086</spNumber>
+			<!-- 用户名 -->
+			<spUserName>10086</spUserName>
+			<!-- 密码 -->
+			<spPassWord>10086</spPassWord>
+			<!-- 批次手机号码数量 -->
+			<numGroupMemberMax>10</numGroupMemberMax>
+			<!-- 流速控制 -->
+			<speeder>100000</speeder>
+		</operatorConfig>
+		<extendData>
+			<!-- 滑动窗口大小 -->
+			<controlSize>16</controlSize>
+			<!-- 进程数 -->
+			<countProcessor>1</countProcessor>
+			<!-- 协议入口缓冲区大小 -->
+			<sizeInBuffer>10240</sizeInBuffer>
+			<!-- 协议出口缓冲区大小 -->
+			<sizeOutBuffer>1024</sizeOutBuffer>
+			<!--协议连接无反馈重试时间，单位秒 -->
+			<connectIdleTime>10</connectIdleTime>
+			<!--协议连接失败的重试时间，单位秒 -->
+			<connectRepeatTime>20</connectRepeatTime>
+			<!--协议连接失败的重试次数 -->
+			<connectRepeatCount>3</connectRepeatCount>
+			<!--信息发送失败的重试时间，单位秒 保留目前未启用 -->
+			<messageRepeatTime>30</messageRepeatTime>
+			<!--信息发送失败的重试次数 保留目前未启用 -->
+			<messageRepeatCount>4</messageRepeatCount>
+			<!--协议滑动窗口清理时间 -->
+			<controlClearTime>50</controlClearTime>
+			<!-- 短信签名类型:1=>运营商网关签名; 2=>利信通网关签名; 3=>用户签名 -->
+			<signType>2</signType>
+			<!-- 短信签名内容 -->
+			<signMessage />
+			<!--客户端支持的版本号 -->
+			<socketVersion>19</socketVersion>
+			<!-- smgp协议需要配置loginMode -->
+			<loginMode>2</loginMode>
+			<smSplit>
+				<!--splitType 短信拆分规则 0 不拆分 1普通短信拆分 -->
+				<normalSplit splitType="1">
+					<!-- 普通短信长度 -->
+					<smLength>70</smLength>
+					<!-- 拆分短信长度 -->
+					<smSplitLength>65</smSplitLength>
+					<!-- 拆分内容的形式如:(1/2) -->
+					<smSplitType>($m/$n)</smSplitType>
+					<!-- 拆分总数 -->
+					<splitCount>\$n</splitCount>
+					<!-- 拆分序号 -->
+					<splitIndex>\$m</splitIndex>
+				</normalSplit>
+				<longSplit splitType="1" headType7="false"
+					smLastSplitCount="1" />
+			</smSplit>
+		</extendData>
+	</smgp>

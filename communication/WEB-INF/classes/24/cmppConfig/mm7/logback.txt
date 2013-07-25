@@ -1,0 +1,1 @@
+	<include file="${WORKDIR}WEB-INF/classes/28/logbackbest/gatewayreplaceGatewayId.xml" />
