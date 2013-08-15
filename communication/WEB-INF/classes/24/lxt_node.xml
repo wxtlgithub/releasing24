@@ -120,6 +120,7 @@
 				<entry key="2470" value-ref="mtsGatewayModule2470" />
 				<entry key="2471" value-ref="mtsGatewayModule2471" />
 				<entry key="2472" value-ref="mtsGatewayModule2472" />
+				<entry key="2473" value-ref="mtsGatewayModule2473" />
 			</map>
 		</property>
 		<property name="subFunctionMap">
@@ -206,6 +207,7 @@
 				<entry key="2470" value-ref="mtsGatewayModule2470" />
 				<entry key="2471" value-ref="mtsGatewayModule2471" />
 				<entry key="2472" value-ref="mtsGatewayModule2472" />
+				<entry key="2473" value-ref="mtsGatewayModule2473" />
 				<entry key="9999" value-ref="reloadFunction" />
 			</map>
 		</property>

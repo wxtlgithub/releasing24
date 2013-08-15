@@ -77,6 +77,7 @@
 	<include file="${WORKDIR}WEB-INF/classes/24/logback/gateway70.xml" />
 	<include file="${WORKDIR}WEB-INF/classes/24/logback/gateway71.xml" />
 	<include file="${WORKDIR}WEB-INF/classes/24/logback/gateway72.xml" />
+	<include file="${WORKDIR}WEB-INF/classes/24/logback/gateway73.xml" />
 	<include file="${WORKDIR}WEB-INF/classes/24/logback/rptprocess.xml" />
 	<include file="${WORKDIR}WEB-INF/classes/24/logback/moprocess.xml" />
 	<include file="${WORKDIR}WEB-INF/classes/24/logback/hub.xml" />

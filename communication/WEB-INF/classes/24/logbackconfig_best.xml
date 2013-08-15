@@ -77,6 +77,7 @@
 	<include file="${WORKDIR}WEB-INF/classes/24/logbackbest/gateway70.xml" />
 	<include file="${WORKDIR}WEB-INF/classes/24/logbackbest/gateway71.xml" />
 	<include file="${WORKDIR}WEB-INF/classes/24/logbackbest/gateway72.xml" />
+        <include file="${WORKDIR}WEB-INF/classes/24/logbackbest/gateway73.xml" />
 	<include file="${WORKDIR}WEB-INF/classes/24/logbackbest/rptprocess.xml" />
 	<include file="${WORKDIR}WEB-INF/classes/24/logbackbest/moprocess.xml" />
 	<include file="${WORKDIR}WEB-INF/classes/24/logbackbest/hub.xml" />

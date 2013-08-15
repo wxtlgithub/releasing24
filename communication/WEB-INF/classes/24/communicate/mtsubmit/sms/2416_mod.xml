@@ -10,6 +10,7 @@
 		<property name="submitQueue" ref="mtsSubmitQueue2416"/>
 		<property name="adapter" ref="mtsPersistentSubmitQueueAdapter2416"/>
 		<property name="gateway" ref="mtsSmgpGateway2416"/>
+		<property name="status" value="STOP"/>
 		<property name="configList">
 			<list>
 				<ref bean="mtsSmgpParameter2416"/>
