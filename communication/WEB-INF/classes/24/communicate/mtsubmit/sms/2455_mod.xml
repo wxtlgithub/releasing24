@@ -10,8 +10,9 @@
 		<property name="submitQueue" ref="mtsSubmitQueue2455"/>
 		<property name="adapter" ref="mtsPersistentSubmitQueueAdapter2455"/>
 		<property name="gateway" ref="mtsSgipGateway2455"/>
-		<property name="configList">
-			<list>
+		<property name="status" value="STOP"/>
+		<property name="configList">	
+                <list>
 				<ref bean="moSgipParameter2455"/>
 				<ref bean="mtsSgipParameter2455"/>
 				<ref bean="mtsSgipDeliverAdapter2455"/>
